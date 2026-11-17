@@ -1,0 +1,185 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    /* background-color: #D2CEC2; */
+    box-sizing: border-box;
+}
+.hero-section{
+    background-color: #D2CEC2;
+    background-image: url(images/cup.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #D2CEC2;
+    background-color: transparent; */
+    height: 80px;
+    align-items: center;
+    box-shadow: 0 2px 3px 1px black;
+}
+
+nav:hover{
+    background-color: white;
+}
+.items li{
+    list-style: none;
+    /* gap: 20px */;
+}
+.logo{
+    display: flex;
+}
+.category li{
+    list-style: none;
+
+}
+.category li:hover{
+    cursor: pointer;
+}
+.category{
+    display: flex;
+    gap: 20px;
+    margin-right: 20vw;
+}
+.items{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#login-btn{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: transform 1s ease-out;
+}
+#login-btn:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.5);
+
+}
+#cart-btn{
+    padding: 1px 10px;
+    color: white;
+    transition: transform 0.5s ease;
+}
+#cart-btn:hover{
+    background-color: rgb(133, 21, 21);
+    transform: scale(1.2);
+    
+
+}
+.content{
+    padding: 10px 50px;
+    font-size: 80px;
+    /* min-height: 100vh; */
+}
+.cards{
+    display: flex;
+    gap: 20px;
+
+}
+.card{
+    min-height: 250px;
+    width:   250px;
+    background-color: white;
+    opacity: 70%;
+    gap: 20px;
+    border-radius: 20px;
+    animation: fadeIn 1.5s ease;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 0.7;}
+}
+.spinner{
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgb(234, 227, 227);
+    border-top-color: blue;
+    border-radius: 050%;
+    animation: spin 1.5s ease-in-out infinite;
+    margin: 25%;
+}
+@keyframes spin{
+    to{ transform: rotate(360deg);}
+}
+.card:hover{
+    
+    /* background-color: brown; */
+    cursor: pointer;
+}
+/* .card p{
+    padding: 20px 20px;
+    font-size: 15px;
+} */
+
+
+
+.card .hidden{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+    font-size: 14px;
+    /* line-height: 1.5; */
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.card .visible{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    transition: opacity 0.8s ease;
+}
+.card:hover .visible{
+    opacity: 0;
+}
+.card:hover .hidden{
+    opacity: 1;
+    visibility: visible;
+}
+.slider-section{
+    height: 100vh;
+    /* width: 80%; */
+    background-color: #DFDAC6;
+    background-position: center;
+    background-image: url(images/slider-ing.webp);
+    background-size: auto;
+    background-repeat: no-repeat;
+    z-index: 100;
+    position: relative;
+}
+.runner-section{
+    height: 100%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+marquee{
+    font-size: 70px;
+    font-weight: 800;
+}
+.bottom-section{
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
